@@ -19,10 +19,7 @@ const createCharacter = async( req, res, next ) => {
 
 const getAllCharacters = async( req, res, next ) => {
     try {
-        const characters = await Characters.find().populate('images').exec((err, posts) => {
-            console.log( err )
-            console.log("Populated User " + posts);
-          });
+        const characters = await Characters.find().populate('images');
         return res.json(
             {
                 status: 200,

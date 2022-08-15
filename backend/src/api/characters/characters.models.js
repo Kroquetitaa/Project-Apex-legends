@@ -15,7 +15,7 @@ const schema = new Schema(
         tacticalAbility: { type: String },
         tacticalPassive: { type: String },
         ultimateAbility: { type: String },
-        imagesAbilities: [{ type: Schema.Types.ObjectId, ref: 'images' }]
+        images:  [{ type: Schema.Types.ObjectId, ref: 'images'}]
     }
 );
 
